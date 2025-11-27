@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku Tamu</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="absen-container">
+    <h1>Buku Tamu</h1>
+    <form id="absenForm" method="post" action="/absen">
+      <div class="form-group">
+        <label for="fullname">Nama Lengkap</label>
+        <input id="fullname" name="fullname" type="text" placeholder="Nama Anda" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Nomor Telepon</label>
+        <input id="phone" name="phone" type="tel" placeholder="085330745126" required />
+      </div>
+      <div class="form-group">
+        <label for="address">Alamat</label>
+        <input id="address" name="address" type="text" placeholder="Jl. Contoh No. 123" required />
+      </div>
+      <div class="form-group">
+        <label for="pekerjaan">Pekerjaan</label>
+        <input id="pekerjaan" name="pekerjaan" type="text" placeholder="Contoh: Siswa, Karyawan, dll" required />
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-primary" type="submit">Kirim</button>
+        <button class="btn" type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
