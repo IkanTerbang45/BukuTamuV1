@@ -1,15 +1,12 @@
 require("dotenv").config()
-const { compile } = require("ejs")
 const jswebtoken = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
 const CookieParser = require("cookie-parser")
 const express = require("express")
+const path = require('path')
 const db = require("better-sqlite3")("BackendTgs.db")
 db.pragma("journal_mode = WAL")
 const app = express()
-
-
-app.set("view engine", "ejs")
 app.use(express.urlencoded({extended : false}))
 app.use(express.json())
 app.use(express.static("public"))
@@ -32,11 +29,11 @@ app.use(function (req, res, next){
 });
 
 app.get("/", (req, res) => {
-    res.render("index");
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get("/absen", (req, res) => {
-    res.render("index");
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 
